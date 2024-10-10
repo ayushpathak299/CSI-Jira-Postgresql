@@ -1,2 +1,5 @@
 # Ignore .env file with sensitive information
 .env
+# Ignore IDE settings and project files
+.idea/
+*.iml
