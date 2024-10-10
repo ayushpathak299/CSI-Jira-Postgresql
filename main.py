@@ -5,15 +5,14 @@ from datetime import datetime, timedelta
 import json
 import os
 
-
-# JIRA_URL = "https://capillarytech.atlassian.net"
-# JIRA_USERNAME = "ayush.pathak@capillarytech.com"
-# JIRA_API_TOKEN = "ATATT3xFfGF0mvuLsY6RvWRW5FrNnzBJ6B-KFvpWjGq1CpE5F4Z7rGJju7oaxBqnml6jdCf7uq3DLYpUtwJDlUrHmUrMMsVxyYy7s8i5CvUfQzfwb9kcY41JWCLyIlEt9Mk5dal-u6A6YBfhzjLHDzwnmX-k15A0K6CbuyZPvhgXqN73MRRn98Y=DE93C9E0"
-# db_host = "jira-redash.c5ditj8vhg0k.us-west-1.rds.amazonaws.com"
-# db_name = "jira"
-# db_user = "redash"
-# db_password = "N6ZrFz8KdR"
-# db_port = "5432"
+JIRA_URL = os.getenv("JIRA_URL")
+JIRA_USERNAME = os.getenv("JIRA_USERNAME")
+JIRA_API_TOKEN = os.getenv("JIRA_API_TOKEN")
+db_host = os.getenv("DB_HOST")
+db_name = os.getenv("DB_NAME")
+db_user = os.getenv("DB_USER")
+db_password = os.getenv("DB_PASSWORD")
+db_port = os.getenv("DB_PORT")
 
 
 yesterday_date = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
